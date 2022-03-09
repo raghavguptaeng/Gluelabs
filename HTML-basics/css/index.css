@@ -8,6 +8,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5em;
 }
+
 header{
     background-color: #35424a;
     color: aliceblue;
@@ -21,7 +22,7 @@ header li{
 }
 
 .container{
-    width: 80%;
+    width: 85%;
     padding-top: 20px;
     padding-bottom: 20px;
     margin: auto;
@@ -99,8 +100,55 @@ footer{
     background-color: #ffc600;
     padding-top: 20px;
     border-top: 3px solid black;
-    position: relative;
+    position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
+}
+
+#side-bar{
+    float: right;
+    width: 20%;
+}
+#main-col{
+    float: left;
+    width: 65%;
+    margin-top: 10px;
+}
+.dark{
+    width: 25%;
+    justify-content: center;
+    text-align:initial;
+    float: right;
+    padding: 15px;
+    background-color: #35424a;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    box-shadow: 15px 15px 34px -11px rgba(0,0,0,0.75);
+}
+.page-title{
+    font-size: 40px;
+}
+ul#services{
+    padding: 0 30px 0 0;
+    list-style: none;
+}
+ul#services li{
+    margin-top: 30px;
+    border: 1px solid grey;
+}
+ul#services li{
+    box-shadow: 15px 15px 34px -11px rgba(0,0,0,0.75);
+    background-color: greenyellow;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+aside#sidebar .quote input{
+    width: 50%;
+    height: 25px;
+    margin-top: 10px;
+    padding: 5px;
 }
