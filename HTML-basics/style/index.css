@@ -14,7 +14,6 @@ body{
     width: 60%;
     margin: auto;
     display: flex;
-    /* align-self: center; */
     flex-wrap: wrap-reverse;
     align-items:stretch;
     justify-content: space-between;
@@ -23,8 +22,6 @@ body{
 }
 
 .right img{
-    /* background-size:unset; */
-    /* background-position: center; */
     background-repeat: no-repeat;
     width: 100%;
     height:100%;
@@ -32,13 +29,13 @@ body{
     margin-bottom: 0%;
     padding: 0;
     border-radius: 0px 10px 10px 0px;
-    accent-color: hsl(277, 64%, 61%);
+    color: hsl(277, 64%, 61%);
 }
 .left{
-    width: 20%;
+    width: 40%;
     display:flex;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
     flex-direction: column;
     justify-content: space-evenly;
 }
@@ -74,9 +71,6 @@ body{
 @media(max-width:600px){
     .container{
         width: 90%;
-    }
-    img{
-        border-radius: 0px;
     }
     .left{
         width: 80%;
