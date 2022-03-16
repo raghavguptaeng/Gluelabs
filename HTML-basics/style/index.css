@@ -16,6 +16,8 @@ body{
     display: grid;
     grid-template-columns:60% 40%;
     border-radius: 20px;
+    text-align: center;
+    justify-content: center;
     /* padding-bottom: 20px; */
 }
 
@@ -75,5 +77,11 @@ body{
 @media (max-width:714px) {
     .container{
         grid-template-columns: 1fr;
+    }
+    .left{
+        grid-row-start: 2;
+    }
+    .right{
+        grid-column-start: 1;
     }
 }
