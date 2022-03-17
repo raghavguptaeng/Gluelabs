@@ -37,12 +37,12 @@ body{
     border-radius: 0px 15px 15px 0px;
 }
 .left{
-    width: 40%;
     display:flex;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 15%;
+    padding-right: 15%;
     padding-bottom: 25px;
     flex-direction: column;
+    text-align: start;
     justify-content: space-evenly;
 }
 .left p{
@@ -79,7 +79,9 @@ body{
         grid-template-columns: 1fr;
     }
     .left{
+        width: 100%;
         grid-row-start: 2;
+        text-align: center;
     }
     .right{
         grid-column-start: 1;
