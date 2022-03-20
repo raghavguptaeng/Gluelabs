@@ -1,0 +1,23 @@
+.form{
+    width: 40%;
+    margin: auto;
+    border: 1px solid red;
+    /* justify-content: center; */
+    text-align:center;
+}
+.holder{
+    margin-bottom: 20px;
+}
+.label-ele{
+    display: inline-block;
+    width: 15%;
+    text-align: start;
+    border: 1px solid green;
+}
+input{
+    display: inline-block;
+    height: 15px;
+}
+.form-element{
+    height: 15px;
+}
