@@ -9,19 +9,21 @@
 </head>
 <body>
     <div class="form">
-        <form action="/" >
+        <div class="msg"></div>
+        <form  class="form-main" >
             <div class="holder">
-                <label class="label-ele" for="name">Name</label>
-                <input type="text" class="form-element" name="name">
+                <label class="label-ele" for="name">Name</label><br>
+                <input id="name" type="text" placeholder="Name" class="form-element" name="name">
             </div>
             <div class="holder">
-                <label class="label-ele" for="email">Email</label>
-                <input type="email" class="form-element" name="email">
+                <label class="label-ele" for="email">Email</label><br>
+                <input id="email"  type="email" placeholder="Enter email" class="form-element" name="email">
             </div>
             <div class="holder">
-                <label class="label-ele"  for="password">Password</label>
-                <input type="password" name="password" class="form-element" id="">
+                <label class="label-ele"  for="password">Password</label><br>
+                <input id="password" type="password" placeholder="Your Password" name="password" class="form-element" >
             </div>
+            <button id="sumbit" type="submit">Submit</button>
         </form>
     </div>
     <script src="javascript/script.js"></script>

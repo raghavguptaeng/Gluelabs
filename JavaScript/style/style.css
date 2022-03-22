@@ -1,23 +1,71 @@
+
 .form{
+    padding-top: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
     width: 40%;
     margin: auto;
-    border: 1px solid red;
+    padding-bottom: 20px;
     /* justify-content: center; */
     text-align:center;
+    background-color: gray;
+    box-shadow: 5px 5px 18px 4px rgba(0,0,0,0.54);
 }
 .holder{
+    text-align: center;
     margin-bottom: 20px;
 }
 .label-ele{
     display: inline-block;
-    width: 15%;
+    width: 50%;
+    font-size: 20px;
+    color: white;
     text-align: start;
-    border: 1px solid green;
 }
-input{
-    display: inline-block;
-    height: 15px;
+form input {
+    width: 50%;
+    height: 25px;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 15px;
+    border: 1px solid black;
+    background-color: wheat;
 }
-.form-element{
-    height: 15px;
+.error{
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    background-color: red;
+    border-radius: 15px;
+    margin-bottom: 25px;
 }
+form button{
+    border:transparent;
+    width: 20%;
+    height: 40px;
+    background-color: chartreuse;
+    color: black;
+    font-size: 15;
+    border-radius: 20px;
+    box-shadow: 5px 5px 18px 4px rgba(0,0,0,0.54);
+}
+@media screen and (max-width:700px) {
+    .form{
+        width: 90%;
+    }
+    .label-ele{
+        width: 80%;
+    }
+    form input{
+        width: 80%;
+    }
+    form button{
+        width: 80%;
+    }
+}
+   
