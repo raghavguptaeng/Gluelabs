@@ -11,6 +11,12 @@
     background-color: gray;
     box-shadow: 5px 5px 18px 4px rgba(0,0,0,0.54);
 }
+li{
+    border-color: aliceblue;
+    color: black;
+    font-weight: bold;
+    list-style: none;
+}
 .holder{
     text-align: center;
     margin-bottom: 20px;

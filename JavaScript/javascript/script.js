@@ -3,6 +3,7 @@ const email = document.getElementById('email')
 const submit = document.getElementById('sumbit');
 const password = document.getElementById('password')
 const err = document.querySelector('.msg');
+const users = document.querySelector('#users');
 
 const email_regex = /^(.+)@(.+)$/;
 const password_regex = /^[a-zA-Z]+$/;
@@ -21,8 +22,13 @@ function validate(e){
         }, 3000);
     }
     else{
-        console.log('ok');
-        console.log(checkPassword(password.value));
+        var new_user = document.createElement('li');
+        var data = document.createTextNode(`${name.value}:${email.value}`);
+        new_user.appendChild(data);
+        users.appendChild(new_user);
+        email.value = '';
+        name.value = '';
+        password.value = '';
     }
 }
 
