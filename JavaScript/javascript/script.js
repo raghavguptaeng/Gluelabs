@@ -43,5 +43,22 @@ document.getElementById("val").addEventListener("input", e=>{
             conv = e.target.value;
         }
     }
+    else if(from==='o'){
+        if(to==='kg'){
+            conv = e.target.value*0.0283495;
+        }
+        else if(to==='g'){
+            conv = e.target.value*28.3495;
+        }
+        else if(to==='p'){
+            conv = e.target.value*0.0625;
+        }
+        else{
+            conv = e.target.value;
+        }
+    }
+    else{
+        conv = e.target.value;
+    }
     document.getElementById('ans').innerText = conv;
 });
