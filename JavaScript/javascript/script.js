@@ -1,58 +1,47 @@
-const name = document.getElementById('name');
-const email = document.getElementById('email')
-const submit = document.getElementById('sumbit');
-const password = document.getElementById('password')
-const err = document.querySelector('.msg');
-const users = document.querySelector('#users');
-
-const email_regex = /^(.+)@(.+)$/;
-const password_regex = /^[a-zA-Z]+$/;
-submit.addEventListener('click',validate);
-
-function validate(e){
-    e.preventDefault();
-    console.log(err);
-    if(email.value==='' || name.value===''  ||  !checkPassword(password.value) ){
-        err.classList.add('error');
-        err.innerText = 'Invalid Input';
-        console.log(password.value)
-        setTimeout(() => {
-            err.classList.remove('error');
-            err.innerText = '';
-        }, 3000);
-    }
-    else{
-        var new_user = document.createElement('li');
-        var data = document.createTextNode(`${name.value}:${email.value}`);
-        new_user.appendChild(data);
-        users.appendChild(new_user);
-        email.value = '';
-        name.value = '';
-        password.value = '';
-    }
-}
-
-function checkPassword(str){
-    var cap = 0;
-    var sm = 0;
-    var num = 0;
-    for(var i=0 ; i<str.length ; ++i){
-        var code = str.charCodeAt(i);
-        if(code>=65 && code<=90 ){
-            sm++;
+document.getElementById("val").addEventListener("input", e=>{
+    var from = document.getElementById('from').value;
+    var to = document.getElementById('to').value;   
+    var conv = 0;
+    if(from==='kg'){
+        if(to==='g'){
+            conv = e.target.value*1000;
         }
-        else if(code>=97 && code<=122){
-            cap++;
+        else if(to==='p'){
+            conv = e.target.value*2.20462;
         }
-        else if(code>=48 && code <=57){
-            num++;
+        else if(to==='o'){
+            conv = e.target.value*35.274;
+        }
+        else{
+            conv = e.target.value;
         }
     }
-    console.log(cap);
-    console.log(sm);
-    console.log(num);
-    if(cap>0 && sm>0 && num>0 && str.length >=8){
-        return true;
+    else if(from==='g'){
+        if(to==='kg')
+            conv = e.target.value/1000;
+        else if(to==='p'){
+            conv = e.target.value*0.00220462;
+        }
+        else if(to==='o'){
+            conv = e.target.value*0.035274;
+        }
+        else{
+            conv = e.target.value;
+        }
     }
-    return false;
-}
+    else if(from==='p'){
+        if(to==='kg'){
+            conv = e.target.value*0.453592;
+        }
+        else if(to==='g'){
+            conv = e.target.value*453.592;
+        }
+        else if(to==='o'){
+            conv = e.target.value*16;
+        }
+        else{
+            conv = e.target.value;
+        }
+    }
+    document.getElementById('ans').innerText = conv;
+});
