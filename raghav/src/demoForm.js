@@ -48,11 +48,15 @@ class DemoForm extends Component {
     )
   }
 
+  handleSubmit =(event)=>{
+    event.preventDefault();
+  }
+
   render() {
     return (
       <>
         <div className="container">
-          <form>
+          <form onSubmit={this.handleSubmit}>
           <label for='email' className="form-check-label">Email</label>
           <input type="text" className="form-control w-25 p-10" onChange={this.takeEmailInput} name='email' placeholder="Enter Email" />
           {/* check boxes start from here */}
@@ -90,6 +94,7 @@ class DemoForm extends Component {
               Female
             </label>
           </div>
+          <button type='submit' className='btn btn-primary'>Submit</button>
           </form>
         </div>
         <h1>Following details were added</h1>

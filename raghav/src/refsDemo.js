@@ -1,138 +1,63 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { Button, Dropdown } from 'react-bootstrap';
 class RefsDemo extends Component {
- 
-    constructor(props)
-    {
-       
-        super(props)
-       
-        this.emailRef = React.createRef()
-        this.commentRef = React.createRef()
-        this.language=React.createRef()          //dropdown menu   reference
-        this.checkstate=React.createRef();       // checkbox reference
-        this.radiobj={};
-        for(var i=0;i<3;i++){
-            var sname="radiostate"+i
-            this.radiobj[sname]=React.createRef();   // radiobuttons reference for 3 different buttons
-        }
-        this.state = { 
-                      langselect:'React',            // the state object for adding extra divs- not used for referencing
-                      ischecked: false,
-                      subject:'',
-                        
-        };
-       
-     
+    constructor(props) {
+        super(props);
+        this.email = React.createRef();
+        this.swimming = React.createRef(); 
+        this.dancing = React.createRef();
+        this.singing = React.createRef();
+        this.states = React.createRef();
+        this.gender = React.createRef();
+      }
+    submithandler = (event) =>{
+        alert(`Email: ${this.email.current.value} \n Hobbies: ${this.swimming.current.checked ? 'Swimming' : ''} ${this.dancing.current.checked ? 'Dancing' : ''} ${this.singing.current.checked ? 'Singing' : ''} \n State: ${this.states.current.value} \n`);
+        event.preventDefault();
     }
-
-    changelanghandler=()=>
-    {
-        this.setState({  langselect: this.language.current.value });
-
-    }
-   changecheckhandler=()=>{
-     console.log(this.checkstate.current.checked)
-    this.setState({ ischecked: this.checkstate.current.checked });
-   }
-
-
-   changeradiohandler=(event)=>{
-
-    for(var i=0;i<3;i++)
-    {
-        var statename='radiostate'+i;
-
-        if(event.target.value!=this.radiobj[statename].current.value){
-          
-            this.radiobj[statename].current.checked=false;
-           
-        }
-        else{
-            this.state.subject=event.target.value;
-        }
-
-    }
-    
-   }
-
-    componentDidMount(){
-        this.emailRef.current.focus()
-    }
-
-    clickHandler = () => {
-        console.log(this.emailRef.current.value)
-        console.log(this.commentRef.current.value)
-        console.log(this.language.current.value)
-        console.log(this.checkstate.current.checked)
-        console.log(this.state.subject);
-
-
-    }
-
-    render() {
-        return (
-            <>
-                <div>
-                    <label htmlFor="email">Email: </label>
-                    <input id="email" type="text" ref={this.emailRef} />
-                </div>
-                <br />
-                <div>
-                    <label htmlFor="comment">Comment: </label>
-                    <textarea id="comment" ref={this.commentRef}></textarea>
-                </div>
-                <br/>
-                <div>
-                    <label htmlFor="language">Language: </label>
-                    <select ref={this.language} onChange={this.changelanghandler}>
-                        <option value="react">React</option>
-                        <option value="angular">Angular</option>
-                        <option value="vue">Vue</option>
-                    </select>
-
-                    <div>
-                    {this.state.langselect} is selected.
-                    </div>
-                </div>
-                <br />
-
-                <div>
-                    <label htmlFor="checkbox">Verify: </label>
-                    
-                    <input type='checkbox' id='check'  ref={this.checkstate} onChange={this.changecheckhandler}/>
-                    <div>
-                    Above checkbox is {this.state.ischecked ? "checked" : "un-checked"}.
-                    </div>
-
-                </div>
-
-                <br/>
-
-                <div>
-                    <label htmlFor="radiobox">OS </label>
-                    
-                    <input type='radio' id='radio' value='OS'  ref={this.radiobj.radiostate0} onChange={this.changeradiohandler} />
-                 
-
-                    <label htmlFor="radiobox">DBMS </label>
-                    
-                    <input type='radio' id='radio' value='DBMS' ref={this.radiobj.radiostate1} onChange={this.changeradiohandler}/>
-
-                    <label htmlFor="radiobox">DSA </label>
-                    
-                    <input type='radio' id='radio' value='DSA' ref={this.radiobj.radiostate2} onChange={this.changeradiohandler}/> 
-               
-
-                </div>
-
-                <br/>
-
-                <button onClick={this.clickHandler}>Submit</button>            
-            </>
-        )
-    }
+  render() {
+    return (
+        <>
+        <div className="container">
+          <form onSubmit={this.submithandler}>
+          <label for='email' className="form-check-label">Email</label>
+          <input type="text" className="form-control w-25 p-10" ref={this.email} name='email' placeholder="Enter Email" />
+          {/* check boxes start from here */}
+          <div className="form-check">
+            <h1>Select Hobbies</h1>
+            <input className="form-check-input" ref={this.dancing}  type="checkbox"   id="flexCheckDefault" />
+            <label className="form-check-label" for="flexCheckDefault">
+              Dancing
+            </label>
+          </div>
+          <div className="form-check">
+            <input className="form-check-input" ref={this.swimming}  type="checkbox"   id="flexCheckChecked"  />
+            <label className="form-check-label" for="flexCheckChecked" >
+              Swimming
+            </label>
+          </div>
+          <div className="form-check">
+            <input className="form-check-input" ref={this.singing} type="checkbox"   id="flexCheckChecked"  />
+            <label className="form-check-label" for="flexCheckChecked">
+              Singing
+            </label>
+          </div>
+          {/* check boxes end here */}
+            <div className="form-check">
+                <label className="form-check-label m-4" for="states">State : </label>
+                <select  ref={this.states} id="states">
+                    <option value="delhi">Delhi</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="bangalore">Bangalore</option>
+                </select>
+            </div>
+          {/* radio boxes start from here */}
+        
+          <Button className='btn btn-warning' type='submit' >submit</Button>
+          </form>
+        </div>
+      </>
+    )
+  }
 }
-
 export default RefsDemo;
