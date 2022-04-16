@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-class App extends Component {
+class DemoForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -21,17 +21,20 @@ class App extends Component {
   }
 
   swimmingState =()=>{
+    alert("Swimmming selected");
     this.setState({
       swimming:!this.state.swimming
     })
   }
   singingState =()=>{
+    alert("singing selected");
     this.setState({
       singing:!this.state.singing
     })
   }
 
   dancingState =()=>{
+    alert("dancing selected");
     this.setState({
       dancing:!this.state.dancing
     })
@@ -92,8 +95,9 @@ class App extends Component {
         <h1>Following details were added</h1>
         <h6>{this.state.email}</h6>
         <h6>{this.state.gender}</h6>
+        <h1>Ref Form Starts from here</h1>
       </>
     )
   }
 }
-export default App;
+export default DemoForm;

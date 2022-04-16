@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import DemoForm from './demoForm';
+import RefsDemo from './refsDemo';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <DemoForm />
+    <RefsDemo />
   </React.StrictMode>,
   document.getElementById('root')
 );
