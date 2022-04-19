@@ -1,14 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import DemoForm from './demoForm';
-import RefsDemo from './refsDemo';
 import reportWebVitals from './reportWebVitals';
+import CardMaker from './components/maker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <DemoForm />
-    <RefsDemo />
+    <CardMaker />
   </React.StrictMode>,
   document.getElementById('root')
 );
