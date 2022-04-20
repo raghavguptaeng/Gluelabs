@@ -6,7 +6,6 @@ export default class Card extends Component {
             name:props.name,
             img:props.img,
             status:props.status,
-            abilities:props.abilities,
         }
     }
   render() {
