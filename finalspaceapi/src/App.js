@@ -1,11 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
-import Searcher from './components/searcher';
+import Apifetcher from './components/apifetcher';
 
 function App() {
   return (
     <div className="App">
-      <Searcher />
+      <Apifetcher />
     </div>
   );
 }
