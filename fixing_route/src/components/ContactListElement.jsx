@@ -10,4 +10,4 @@ function ContactListElement({fname,lname,phone,email}) {
   )
 }
 
-export default ContactListElement
+export default ContactListElement;

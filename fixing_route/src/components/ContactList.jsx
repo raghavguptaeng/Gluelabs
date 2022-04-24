@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import ContactListElement from './ContactListElement'
+import './ContactListMain.css';
+
 function ContactList({contacts}) {
   return (
     <React.Fragment>

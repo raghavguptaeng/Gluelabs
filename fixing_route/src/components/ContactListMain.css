@@ -1,0 +1,9 @@
+*{
+    margin: 20px;
+}
+button{
+    width: 20%;
+    border-radius: 20px;
+    height: 70px;
+    background-color: aquamarine;
+}
