@@ -1,10 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import ContactListElement from './ContactListElement'
 function ContactList({contacts}) {
   return (
     <React.Fragment>
-        {contacts.map((contact) =><ContactListElement {...contact}/>)};
-        
+        <h1>Contact List</h1>
+        <Link to='/add'>
+            <button>Add Contact</button>
+        </Link>
+        {contacts.map((contact) =><ContactListElement key={contact.email} {...contact}/>)};
    </React.Fragment>
   )
 }

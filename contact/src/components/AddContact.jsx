@@ -1,17 +1,21 @@
 import React, { useEffect, useRef } from 'react';
+import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './addContact.css';
-function AddContact({addContactHandler}) {
+function AddContact({addContact}) {
+    const history = useHistory();
     const firstName = useRef();
     const lastName = useRef('');
     const email = useRef('');
     const phone = useRef('');
     const filler = (e)=>{
         e.preventDefault();
-        addContactHandler({
+        addContact({
             fname: firstName.current.value,
             lname: lastName.current.value,
             email: email.current.value,
             phone: phone.current.value});
+        history.push('/');
     }
     return (
         <React.Fragment>
@@ -39,7 +43,7 @@ function AddContact({addContactHandler}) {
                     </div>
                     <br />
                     <div className="form-ele">
-                        <button type="submit" onClick={filler}>Add Contact</button>
+                            <button type="submit" onClick={filler}>Add Contact</button>
                     </div>
                 </form>
             </div>
