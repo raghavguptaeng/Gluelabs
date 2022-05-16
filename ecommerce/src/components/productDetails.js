@@ -3,6 +3,8 @@ import React, { useEffect } from 'react'
 import {useSelector , useDispatch} from 'react-redux'
 import { useParams } from 'react-router-dom'
 import {selectedProduct , removeSelectedProduct} from '../redux/Actions/productsActions'
+import './productDetails.css';
+
 function ProductDetails() {
 
   const {id} = useParams();
@@ -24,35 +26,16 @@ function ProductDetails() {
   
   return (
     <div>
-      <div className="ui grid container">
-            {Object.keys(product).length === 0 ? (
-                <div className="ui active centered inline loader"></div>
-            ) : (
-                <div className="ui placeholder segment">
-                    <div className="ui two column stackable center aligned grid">
-                        <div className="ui vertical divider">AND</div>
-                        <div className="middle aligned row">
-                            <div className="column lp">
-                                <img className="ui fluid image" src={image} />
-                            </div>
-                            <div className="column rp">
-                                <h1>{title}</h1>
-                                <h2>
-                                    <a className="ui teal tag label">${price}</a>
-                                </h2>
-                                <h3 className="ui brown block header">{category}</h3>
-                                <p>{description}</p>
-                                <div className="ui vertical animated button" tabIndex="0">
-                                    <div className="hidden content">
-                                        <i className="shop icon"></i>
-                                    </div>
-                                    <div className="visible content">Add to Cart</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            )}
+        <div className="container">
+            <div class="image-container">
+                <img src={image} alt="Product Image" />
+            </div>
+            <div class="product-details">
+                <h2>{title}</h2>
+                <p>{description}</p>
+                <p>Price: {price}</p>
+                <p>Category: {category}</p>
+            </div>
         </div>
     </div>
   )
