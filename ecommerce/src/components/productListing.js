@@ -5,6 +5,7 @@ import axios from 'axios';
 import { setProducts } from '../redux/Actions/productsActions';
 function ProductListing() {
   const dispatch = useDispatch();
+  const [called, setCalled] = React.useState(false);
   const fetchProducts = async() => {
     const resp = await axios.get('https://fakestoreapi.com/products');
     if(resp.status === 200) {
@@ -14,7 +15,7 @@ function ProductListing() {
 
   React.useEffect(() => {
     fetchProducts();
-  } , []);
+  } , [called]);
 
   return (
     <div>
