@@ -14,7 +14,7 @@ function Login() {
         console.log(emailRef.current.value, passwordRef.current.value);
     }
     const goToSignUp = () => {
-        navigate('/signup');
+        navigate('/register');
     }
     return (
         <div className='LoginMain'>
