@@ -77,6 +77,8 @@ body{
 .getInfo button{
     background-color: #E50914;
     width: 40%;
+    color: white;
+    font-size: 20px;
     border: none;
 }
 .sections{
