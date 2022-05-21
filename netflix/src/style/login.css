@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.LoginMain{
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/back.jpg');
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.Logo img{
+    width: 20%;
+}
+.Login{
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    opacity: 06;
+    width: 40%;
+    height: 70%;
+    /* height: 500px; */
+    text-align: center;
+    padding: 5%;
+    margin: auto;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.LoginForm{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.inputFields input{
+    width: 80%;
+    height: 60px;
+    background-color: #333333;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+}
+.inputFields input::placeholder{
+    padding: 20px;
+    color: rgb(116, 116, 116);
+    font-size: 20px;
+    
+}
+.signIn{
+    align-self: center;
+    width: 80%;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #E50914;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.Login h1{
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    font-family: "Bebas Neue";
+}
+.remember h6{
+    color: white;
+}
+.Login h3{
+    color: white;
+    font-family: "Bebas Neue";
+    font-weight: 100;
+    margin: 20px;
+}
+.Login h3 span{
+    margin: 10px;
+    color: #E50914;
+}
+@media screen and (max-width: 600px){
+    .Logo{
+        width: 100%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 1);
+    }
+    .Logo img{
+        width: 50%;
+        /* margin:auto; */
+    }
+    .Login{
+        background-color: rgba(0, 0, 0, 1);
+        height: 85%;
+        width: 100%;
+    }
+}   
