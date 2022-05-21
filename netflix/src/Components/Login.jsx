@@ -12,6 +12,7 @@ function Login() {
     const handleSignIn = (e) => {
         e.preventDefault();
         console.log(emailRef.current.value, passwordRef.current.value);
+        navigate('/profile');
     }
     const goToSignUp = () => {
         navigate('/register');
