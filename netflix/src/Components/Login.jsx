@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import Logo from '../images/NetFlixLogo.png'
 import '../style/login.css'
 
@@ -7,11 +8,13 @@ function Login() {
     const submitRef = React.useRef(null);
     const emailRef = React.useRef('');
     const passwordRef = React.useRef('');
-    const [email, setEmail] = React.useState('');
-    const [password, setPassword] = React.useState('');
+    const navigate = useNavigate();
     const handleSignIn = (e) => {
         e.preventDefault();
         console.log(emailRef.current.value, passwordRef.current.value);
+    }
+    const goToSignUp = () => {
+        navigate('/signup');
     }
     return (
         <div className='LoginMain'>
@@ -31,7 +34,7 @@ function Login() {
                     <button className='signIn' onClick={handleSignIn} ref={submitRef}>Sign In</button>
                 </div>
                 </form>
-                <h3>Not a Member Yet ? <span>Register Now</span></h3>
+                <h3>Not a Member Yet ? <span onClick={goToSignUp}>Register Now</span></h3>
             </div>
         </div>
     )
