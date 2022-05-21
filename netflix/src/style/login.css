@@ -12,11 +12,10 @@
 }
 .Login{
     background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 10px;
+    border-radius: 20px;
     opacity: 06;
     width: 40%;
     height: 90vh;
-    /* height: 500px; */
     text-align: center;
     padding: 5%;
     margin: auto;
@@ -91,6 +90,7 @@
         /* margin:auto; */
     }
     .Login{
+        border-radius: 0px;
         background-color: rgba(0, 0, 0, 1);
         height: 85vh;
         overflow-y: auto;
