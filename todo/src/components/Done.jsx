@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import DoneCard from './cards/DoneCard';
+import {GrAddCircle} from 'react-icons/gr';
+import TaskAddButton from './TaskAddButton';
 
 export default class Done extends Component {
     constructor(props) {
@@ -22,6 +24,7 @@ export default class Done extends Component {
                         );
                     })
                 }
+                <TaskAddButton />
                 </div>
             </div>
         )

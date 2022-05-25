@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import DoingCard from './cards/DoingCard';
+import TaskAddButton from './TaskAddButton';
 
 export default class Doing extends Component {
     constructor(props) {
@@ -23,6 +24,7 @@ export default class Doing extends Component {
                             );
                         })
                     }
+                    <TaskAddButton />
                     </div>
             </div>
         </div>

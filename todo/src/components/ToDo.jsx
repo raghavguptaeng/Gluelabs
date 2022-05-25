@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ToDoCard from './cards/ToDoCard';
+import TaskAddButton from './TaskAddButton';
 
 
 export default class ToDo extends Component {
@@ -23,6 +24,7 @@ export default class ToDo extends Component {
                         );
                     })
                 }
+                <TaskAddButton />
                 </div>
             </div>
         )
