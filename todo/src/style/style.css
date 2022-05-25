@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.containerForCards{
+    width:30%;
+    display: flex;
+    flex-flow: column;
+    padding:10px;
+    justify-content: center;
+    align-items: center;
+    border:1px solid red;
+}
+.card-body p{
+    text-overflow: ellipsis;
+    overflow:hidden;
+    width: 80%;
+    text-align: center;
+}
+@media screen and (max-width: 600px){
+    .containerForCards{
+        width:100%;
+    }
+    .card-body p{
+        display: none;
+    }
+}

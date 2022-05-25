@@ -1,19 +1,24 @@
 import React, { Component } from 'react'
 
-export default class ToDoCard extends Component {
+class ToDoCard extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            title:this.props.data.title,
+            description:this.props.data.description,
+        }
+    }
     render() {
         return (
             <div>
-               <div class={`card ${window.innerWidth>=500?'w-96':'w-64'} bg-primary text-primary-content`}>
+               <div class={`card ${window.innerWidth>=600?'w-96':'w-64'} bg-primary m-5 text-primary-content`}>
                     <div class="card-body">
-                        <h2 class="card-title">Card title!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn">Buy Now</button>
-                        </div>
+                        <h2 class="card-title">{this.state.title}</h2>
+                        <p>{this.state.description}</p>
                     </div>
                 </div>
             </div>
         )
     }
 }
+export default ToDoCard;

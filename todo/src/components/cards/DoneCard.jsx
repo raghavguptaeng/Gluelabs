@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class DoneCard extends Component {
+class DoneCard extends Component {
     render() {
         return (
             <div>
@@ -17,3 +17,4 @@ export default class DoneCard extends Component {
         )
     }
 }
+export default DoneCard;

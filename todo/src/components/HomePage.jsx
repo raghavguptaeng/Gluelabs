@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Doing from './Doing';
 import ToDo from './ToDo';
 
 class HomePage extends Component {
@@ -10,16 +11,23 @@ class HomePage extends Component {
                     id:1,
                     title:'Learn React',
                     completed:false,
-                    description:'loremlsdnvsl;nv;sdnfv;ndjsvfnsdk;n'
+                    description:'loremlsdnvsdvsjdnsdvnsldjas;ldnv;sajnvsl;nv;sdnfv;ndjsvfnsdk;n'
                 },
                 {
                     id:2,
                     title:'Learn Flutter',
                     completed:false,
-                    description:'loremlsdnvsl;nv;sdnfv;ndjsvfnsdk;n'
+                    description:'loremlsdnvsdvsjdnsdvnsldjas;ldnv;sajnvsl;nv;sdnfv;ndjsvfnsdk;n'
                 },
             ],
-            doing:[],
+            doing:[
+                {
+                    id:2,
+                    title:'Learn Flutter',
+                    completed:false,
+                    description:'loremlsdnvsdvsjdnsdvnsldjas;ldnv;sajnvsl;nv;sdnfv;ndjsvfnsdk;n'
+                },
+            ],
             done:[],
         }
     }
@@ -27,6 +35,7 @@ class HomePage extends Component {
         return (
         <div>
             <ToDo data={this.state.todo} />
+            <Doing data={this.state.doing} />
         </div>
 
         );
