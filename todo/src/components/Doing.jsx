@@ -11,8 +11,11 @@ export default class Doing extends Component {
     render() {
         return (
         <div>
-            <div className='Doing'>
+            <div className='DoingList'>
                     <div className="containerForCards">
+                    <div className="topRow m-5">
+                        <h1>Doing</h1>
+                    </div>
                     {
                         this.state.data.map((item, index) => {
                             return (

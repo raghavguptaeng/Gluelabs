@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import ToDoCard from './cards/ToDoCard';
+import DoneCard from './cards/DoneCard';
 
-
-export default class ToDo extends Component {
+export default class Done extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -11,15 +10,15 @@ export default class ToDo extends Component {
     }
     render() {
         return (
-            <div className='toDoList'>
+            <div className='DoneList'>
                 <div className="containerForCards">
                 <div className="topRow m-5">
-                    <h1>To Do</h1>
+                    <h1>Done</h1>
                 </div>
                 {
                     this.state.data.map((item, index) => {
                         return (
-                            <ToDoCard key={index} data={item} />
+                            <DoneCard key={index} data={item} />
                         );
                     })
                 }
