@@ -3,9 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Helvetica';
+    /* background-color: #f5f5f5; */
 }
 .sideNav{
-    width: 35%;
+    background-color: white;
+    width: 15%;
     height: 100vh;
     border:1px solid black;
 }
@@ -34,4 +36,22 @@
     color: #787e7e;
     cursor: pointer;
     text-decoration: underline;
+}
+hr{
+    margin: 0 10px 0px 10px;
+    border: none;
+    border-top: 1px dotted #787e7e;
+}
+.para {
+    margin: 20px 0px 60px 0px;
+    font-size: 14px;
+    line-height: 20px;
+}
+blockquote{
+    display: block;
+    /* background-color: #787e7e; */
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
 }
