@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Active from './Active';
 
 class MainBody extends Component {
     render() {
@@ -10,6 +11,9 @@ class MainBody extends Component {
                     </div>
                     <div className="inputTodo">
                         <input type="text" placeholder="What needs to be done?" />
+                    </div>
+                    <div className="cards">
+                        <Active />
                     </div>
                 </div>
             </div>
